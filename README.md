@@ -7,13 +7,13 @@ Function returning an object representing the difference between two objects. Th
 ## Installation
 
 ```
-npm install -S return-deep-diff
+npm install -S return-deep-diffs
 ```
 
 ## Usage
 
 ```js
-import deepDiff from 'return-deep-diff'
+import deepDiff from 'return-deep-diffs'
 
 const objOne = {
   a: 1,
