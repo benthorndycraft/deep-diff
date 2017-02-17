@@ -15,9 +15,11 @@ import arrayEquals from './utils/arrayEquals'
  *  @return  {Object}                        A diff object
  */
 function deepDiff (obj1, obj2, keepNewKeys = false) {
-  if (typeof obj1 !== 'object') {
-    throw new TypeError('First parameter must be an object')
-  }
+
+  // allow obj2 to add objects that are not in obj1
+  //if (typeof obj1 !== 'object') {
+  //  throw new TypeError('First parameter must be an object')
+  //}
 
   if (typeof obj2 !== 'object') {
     throw new TypeError('Second parameter must be an object')
@@ -26,7 +28,14 @@ function deepDiff (obj1, obj2, keepNewKeys = false) {
   const diff = {}
 
   Object.keys(obj2).forEach((key) => {
-    if (!obj1.hasOwnProperty(key) && !keepNewKeys) {
+
+    // allow obj2 to add objects that are not in obj1
+    if (obj1 === undefined) {
+        diff[key] = obj2[key]
+      return
+    }
+
+    if ( !obj1.hasOwnProperty(key) && !keepNewKeys ) {
       return
     }
 
