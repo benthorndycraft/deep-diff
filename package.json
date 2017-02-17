@@ -1,6 +1,6 @@
 {
   "name": "return-deep-diffs",
-  "version": "0.2.8",
+  "version": "0.2.8.1",
   "description": "Small library who deeply check for difference between two objects",
   "repository": {
     "url": "https://github.com/benthorndycraft/deep-diff.git",
