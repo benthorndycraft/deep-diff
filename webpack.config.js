@@ -9,8 +9,8 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'return-deep-diff.min.js',
-    library: 'return-deep-diff',
+    filename: 'return-deep-diffs.min.js',
+    library: 'return-deep-diffs',
     libraryTarget: 'umd'
   },
   plugins: [

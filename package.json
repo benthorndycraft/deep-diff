@@ -1,14 +1,14 @@
 {
   "name": "return-deep-diffs",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "Small library who deeply check for difference between two objects",
   "repository": {
     "url": "https://github.com/benthorndycraft/deep-diff.git",
     "type": "git"
   },
-  "main": "./dist/return-deep-diff.min.js",
+  "main": "./dist/return-deep-diffs.min.js",
   "scripts": {
-    "build": "npm test && webpack",
+    "build": "webpack",
     "test": "NODE_ENV=test standard && jest --verbose --coverage",
     "format": "standard --fix"
   },
