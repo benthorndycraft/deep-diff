@@ -6,6 +6,7 @@ Function returning an object representing the difference between two objects. Th
 
 This is a fork of [deep-diff](https://github.com/dispix/deep-diff) by [dispix](https://github.com/dispix) with some extra code to allow obj2 to add keys/objects that 
 are not found in obj1.
+
 ## Installation
 
 ```
