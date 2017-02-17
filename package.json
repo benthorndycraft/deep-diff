@@ -1,9 +1,9 @@
 {
-  "name": "return-deep-diff",
+  "name": "return-deep-diffs",
   "version": "0.2.7",
   "description": "Small library who deeply check for difference between two objects",
   "repository": {
-    "url": "https://github.com/dispix/deep-diff.git",
+    "url": "https://github.com/benthorndycraft/deep-diff.git",
     "type": "git"
   },
   "main": "./dist/return-deep-diff.min.js",
