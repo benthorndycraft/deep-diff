@@ -1,0 +1,124 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/ticklez/docker/survey-app/deep-diff',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/ticklez/.npm/return-deep-diffs/0.2.7/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/ticklez/.npm correctMkdir not in flight; initializing
+10 info lifecycle return-deep-diffs@0.2.7~prepublish: return-deep-diffs@0.2.7
+11 silly lifecycle return-deep-diffs@0.2.7~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/ticklez/.npm/return-deep-diffs/0.2.7/package.tgz',
+12 verbose tar pack   '/Users/ticklez/docker/survey-app/deep-diff' ]
+13 verbose tarball /Users/ticklez/.npm/return-deep-diffs/0.2.7/package.tgz
+14 verbose folder /Users/ticklez/docker/survey-app/deep-diff
+15 verbose addLocalTarball adding from inside cache /Users/ticklez/.npm/return-deep-diffs/0.2.7/package.tgz
+16 verbose correctMkdir /Users/ticklez/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd return-deep-diffs@0.2.7
+18 verbose afterAdd /Users/ticklez/.npm/return-deep-diffs/0.2.7/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/ticklez/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/ticklez/.npm/return-deep-diffs/0.2.7/package/package.json written
+21 silly publish { name: 'return-deep-diffs',
+21 silly publish   version: '0.2.7',
+21 silly publish   description: 'Small library who deeply check for difference between two objects',
+21 silly publish   repository:
+21 silly publish    { url: 'git+https://github.com/benthorndycraft/deep-diff.git',
+21 silly publish      type: 'git' },
+21 silly publish   main: './dist/return-deep-diff.min.js',
+21 silly publish   scripts:
+21 silly publish    { build: 'npm test && webpack',
+21 silly publish      test: 'NODE_ENV=test standard && jest --verbose --coverage',
+21 silly publish      format: 'standard --fix' },
+21 silly publish   standard:
+21 silly publish    { globals: [ 'expect', 'it', 'describe' ],
+21 silly publish      ignore: [ '/dist', '/node_modules' ] },
+21 silly publish   babel: { presets: 'es2015' },
+21 silly publish   keywords: [ 'javascript', 'object', 'es6', 'es2015', 'webpack', 'jest' ],
+21 silly publish   author: { name: 'Octave "Dispix" Raimbault', email: 'dispyx@gmail.com' },
+21 silly publish   license: 'ISC',
+21 silly publish   devDependencies:
+21 silly publish    { babel: '^6.5.2',
+21 silly publish      'babel-cli': '^6.14.0',
+21 silly publish      'babel-core': '^6.18.2',
+21 silly publish      'babel-loader': '^6.2.8',
+21 silly publish      'babel-preset-es2015': '^6.14.0',
+21 silly publish      coveralls: '^2.11.14',
+21 silly publish      jest: '^16.0.2',
+21 silly publish      standard: '^8.1.0',
+21 silly publish      webpack: '^1.13.3' },
+21 silly publish   readme: '#  Deep Diff\n[![Build Status](https://travis-ci.org/dispix/deep-diff.svg?branch=master)](https://travis-ci.org/dispix/deep-diff) [![npm](https://badge.fury.io/js/return-deep-diff.svg)](https://www.npmjs.com/package/return-deep-diff)\n[![Coverage Status](https://coveralls.io/repos/github/dispix/deep-diff/badge.svg?branch=master)](https://coveralls.io/github/dispix/deep-diff?branch=master)\n\nFunction returning an object representing the difference between two objects. The function is immutable-compliant as it does not affect the arguments.\n\n## Installation\n\n```\nnpm install -S return-deep-diffs\n```\n\n## Usage\n\n```js\nimport deepDiff from \'return-deep-diffs\'\n\nconst objOne = {\n  a: 1,\n  b: {\n    c: 2,\n    d: 3\n  },\n  e: 4\n}\n\nconst objTwo = {\n  a: 1,\n  b: {\n    c: 2,\n    d: 30,\n    f: 50\n  },\n  e: 40\n}\n\nconsole.log(deepDiff(objOne, objTwo))\n/*\nreturns:\n  {\n    b: {\n      d: 30\n    },\n    e: 40\n  }\n*/\n\nconsole.log(deepDiff(objOne, objTwo, true))\n/*\nreturns:\n  {\n    b: {\n      d: 30\n      f: 50\n    },\n    e: 40\n  }\n*/\n```\n\nThe two objects must share the exact same structure, which is defined by the first object. If a key is present in the second but not the first object, it will not be present in the diff object unless `keepNewKeys` equals `true`.\nThe function does not mutate neither the first nor the second object.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'd4b8a0380a8d11ada8eb42a19ada9f613dfda5e6',
+21 silly publish   bugs: { url: 'https://github.com/benthorndycraft/deep-diff/issues' },
+21 silly publish   homepage: 'https://github.com/benthorndycraft/deep-diff#readme',
+21 silly publish   _id: 'return-deep-diffs@0.2.7',
+21 silly publish   _shasum: '01d4d83e3911b7863e9de1ce49997013fc4633db',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name return-deep-diffs
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'return-deep-diffs',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'return-deep-diffs',
+26 silly mapToRegistry   name: 'return-deep-diffs',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/return-deep-diffs
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/ticklez/.npm/return-deep-diffs/0.2.7/package.tgz
+30 verbose request uri https://registry.npmjs.org/return-deep-diffs
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 10:43:06 AM
+33 verbose request using bearer token for auth
+34 verbose request id b991bbbb4a22f447
+35 http request PUT https://registry.npmjs.org/return-deep-diffs
+36 http 403 https://registry.npmjs.org/return-deep-diffs
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Fri, 17 Feb 2017 10:43:08 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-lhr6350-LHR',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1487328187.574550,VS0,VE876',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/ticklez/.npm/registry.npmjs.org/return-deep-diffs on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.2.7." : return-deep-diffs
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+41 verbose statusCode 403
+42 verbose pkgid return-deep-diffs
+43 verbose cwd /Users/ticklez/docker/survey-app/deep-diff
+44 error Darwin 14.5.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.9.1
+47 error npm  v3.10.8
+48 error code E403
+49 error "You cannot publish over the previously published version 0.2.7." : return-deep-diffs
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
